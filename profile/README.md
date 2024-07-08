@@ -1,4 +1,13 @@
-## Hi there 👋
+# Welcome at eworx Marketing Suite Examples
+
+In the linked repositories we show yout how to use the eworx Marketing Suite API. There are several programming languages we offer to use.
+
+1. visit C#-Examples
+2. visit PHP-Examples
+
+## Common required setup
+All examples require the setup of the servi url and the credentials to use.
+...
 
 <!--
 
