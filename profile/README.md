@@ -31,3 +31,18 @@ EmsServiceAgent serviceAgent = new EmsServiceAgent()
         "[Application]"     // the name of the registered application
     );
 ```
+
+```php
+// php demo code to create an eMS ServiceAgent
+$serviceAgent = new \eMS\EmsServiceAgent()
+    .useServiceUrl("https://mailworx.marketingsuite.info/Services/JSON/ServiceAgent.svc")
+                    // Url to the eMS service.
+                    // Not required, default value "https://mailworx.marketingsuite.info/Services/JSON/ServiceAgent.svc"
+    .useLanguage("EN")     // Language of the text values ​​returned. Not required, default value is "EN"
+    .useCredentials(
+        "[Account]",        // account name (Mandant) of the eMS to login
+        "[Username]",       // user name to use to login
+        "[Password]",       // the user's password
+        "[Application]"     // the name of the registered application
+    );
+```
