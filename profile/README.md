@@ -1,21 +1,27 @@
-# Welcome at eworx Marketing Suite Examples
+# Welcome to eworx Marketing Suite Examples
 
-In the linked repositories we show yout how to use the eworx Marketing Suite API. There are several programming languages we offer to use.
+The eworx Marketing Suite (eMS) provides its own API for connecting to other systems.
+In this project we provide examples in different programming languages ​​to illustrate the application.
 
-1. visit C#-Examples
-2. visit PHP-Examples
+The complete API documentation can be found at https://www.eworx.at/doku/api-schnittstellenbeschreibung/ (Documentation in German)
+
+We provide the following programming languages
+1. visit C# examples
+2. visit PHP examples
 
 ## Common required setup
-All examples require the setup of the servi url and the credentials to use.
-...
 
-<!--
+In order to use the API, an application must first be registered, in which a selection of methods is made that are to be used. You can register your application at https://www.eworx.at/doku/api-schnittstellenbeschreibung/#zugang-zur-api-anlegen. The name given there is required for logging into the eMS.
+The connection to the eMS is ensured with a ServiceAgent, which is created at the beginning of each use case.
 
-**Here are some ideas to get you started:**
-
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+``` // C# demo code to create an eMS ServiceAgent
+EmsServiceAgent serviceAgent = new EmsServiceAgent()
+    .UseServiceUrl("") // not required, default value "https://mailworx.marketingsuite.info/services/serviceagent.asmx"
+    .UseLanguage("EN") // Language of the text values ​​returned
+    .UseCredentials(
+        "[Account]",    // account name (Mandant) of the eMS to login
+        "[Username]",   // user name to use to login
+        "[Password]",   // the user's password
+        "[Application]" // the name of the registered application
+    );
+```
