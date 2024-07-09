@@ -20,8 +20,10 @@ The connection to the eMS is ensured with a ServiceAgent, which is created at th
 ```cs
 // C# demo code to create an eMS ServiceAgent
 EmsServiceAgent serviceAgent = new EmsServiceAgent()
-    .UseServiceUrl("")     // not required, default value "https://mailworx.marketingsuite.info/services/serviceagent.asmx"
-    .UseLanguage("EN")     // Language of the text values ​​returned
+    .UseServiceUrl("https://mailworx.marketingsuite.info/services/serviceagent.asmx")
+                    // Url to the eMS service.
+                    // Not required, default value "https://mailworx.marketingsuite.info/services/serviceagent.asmx"
+    .UseLanguage("EN")     // Language of the text values ​​returned. Not required, default value is "EN"
     .UseCredentials(
         "[Account]",        // account name (Mandant) of the eMS to login
         "[Username]",       // user name to use to login
