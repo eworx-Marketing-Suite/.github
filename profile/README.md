@@ -17,7 +17,7 @@ Register your application at https://www.eworx.at/doku/api-schnittstellenbeschre
 
 The connection to the eMS is ensured with a ServiceAgent, which is created at the beginning of each use case.
 
-##### C# for EmsServiceAgent
+##### C# for EmsServiceAgent and create a simple request
 ```cs
 // C# demo code to create an eMS ServiceAgent
 EmsServiceAgent serviceAgent = new EmsServiceAgent()
@@ -31,9 +31,12 @@ EmsServiceAgent serviceAgent = new EmsServiceAgent()
         "[Password]",       // the user's password
         "[Application]"     // the name of the registered application
     );
+
+// create simple request
+serviceAgent.CreateRequest(new CampaignsRequest());
 ```
 
-##### PHP for EmsServiceAgent
+##### PHP for EmsServiceAgent and create a simple request
 ```php
 // php demo code to create an eMS ServiceAgent
 $serviceAgent = new \eMS\EmsServiceAgent()
@@ -47,4 +50,7 @@ $serviceAgent = new \eMS\EmsServiceAgent()
         "[Password]",       // the user's password
         "[Application]"     // the name of the registered application
     );
+
+// create simple request
+$serviceAgent.createRequest('GetCampaigns');
 ```
