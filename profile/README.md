@@ -8,6 +8,7 @@ The complete API documentation can be found at https://www.eworx.at/doku/api-sch
 We provide the following programming languages
 1. [visit C# examples](../../../../CSharp-API-Demo-Project)
 2. [visit PHP examples](../../../../Php-API-Demo-Project)
+3. [visit Node.js exammples](../../../../NodeJS-API-Demo-Project)
 
 ## Common required setup
 
